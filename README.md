@@ -1,39 +1,83 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+Hi Flutter dev, this package helps you to build UI with adaptive screen based on mobile, tab and web.
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
+## Example
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+<img src= "https://raw.githubusercontent.com/ferdiangunawan/adaptive_screen_flutter/master/screen_adaptive_flutter.gif"/>
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+You can custom the brakepoint of the screen width or just use the default of 
+this package for the screen width.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+The defaut brake point of tab is `600.0` and `950` for the web.
 
+OR
+
+If you want to custom the brake point,
+you can set init brake point in main method like this
+ 
 ```dart
-const like = 'sample';
+void main(){
+    // here for setting mobile to tab brakepoint
+    ScreenInit.setTabBrakePoint(650.0);
+    // here for setting tab to web brakepoint
+    ScreenInit.setWebBrakePoint(1000.0);
+    runApp(MyApp());
+}
+```
+Wrap your widget with `AdaptiveScreen()`
+```dart
+AdaptiveScreen(
+    mobile: Center(
+        child: Text('Ini Mobile')
+    ),
+    tab: Row(
+        children:[
+            Text('Ini tab'),
+            Container()
+            // ...
+        ]
+    ),
+    web: Column(
+        children:[
+            Text('Ini web'),
+            SizedBox(height:30),
+            // ...
+        ]
+    )
+)
 ```
 
-## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+## LICENSE
+
+``
+MIT License
+
+Copyright (c) 2022 Ferdian Gunawan
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+``
+
+## Additional Information
+Please don't hesitate to contribute to this package.
+
+Shout out to Abdelouahed Medjoudja that has inspired me for the default width screen `600` and `950`.
