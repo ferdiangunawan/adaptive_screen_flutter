@@ -1,7 +1,8 @@
 library adaptive_screen_flutter;
 
-import 'package:adaptive_screen_flutter/screen_init.dart';
 import 'package:flutter/material.dart';
+
+part 'screen_init.dart';
 
 class AdaptiveScreen extends StatelessWidget {
   final Widget? web;

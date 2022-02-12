@@ -1,5 +1,4 @@
 import 'package:adaptive_screen_flutter/adaptive_screen_flutter.dart';
-import 'package:adaptive_screen_flutter/screen_init.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 

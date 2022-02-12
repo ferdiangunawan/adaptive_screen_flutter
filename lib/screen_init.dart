@@ -1,3 +1,5 @@
+part of 'adaptive_screen_flutter.dart';
+
 class ScreenInit {
   static double tabBreakPoint = 600.0;
 
