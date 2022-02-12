@@ -1,5 +1,6 @@
 library adaptive_screen_flutter;
 
+import 'package:adaptive_screen_flutter/screen_init.dart';
 import 'package:flutter/material.dart';
 
 class AdaptiveScreen extends StatelessWidget {
@@ -16,9 +17,9 @@ class AdaptiveScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var screenWidth = MediaQuery.of(context).size.width;
-    if (screenWidth > 600) {
+    if (screenWidth > ScreenInit.tabBreakPoint) {
       return tab ?? web ?? mobile!;
-    } else if (screenWidth > 950) {
+    } else if (screenWidth > ScreenInit.webBreakPoint) {
       return web ?? tab ?? mobile!;
     }
     return mobile ?? tab ?? web!;
