@@ -18,10 +18,10 @@ class AdaptiveScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var screenWidth = MediaQuery.of(context).size.width;
-    if (screenWidth > ScreenInit.tabBreakPoint) {
-      return tab ?? web ?? mobile!;
-    } else if (screenWidth > ScreenInit.webBreakPoint) {
+    if (screenWidth > ScreenInit.webBreakPoint) {
       return web ?? tab ?? mobile!;
+    } else if (screenWidth > ScreenInit.tabBreakPoint) {
+      return tab ?? web ?? mobile!;
     }
     return mobile ?? tab ?? web!;
   }
