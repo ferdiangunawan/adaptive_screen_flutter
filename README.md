@@ -21,7 +21,7 @@ you can set init brake point in main method like this
 ```dart
 void main(){
     // here for setting mobile to tablet brakepoint
-    ScreenInit.setTabBrakePoint(650.0);
+    ScreenInit.setTabletBrakePoint(650.0);
     // here for setting tablet to web brakepoint
     ScreenInit.setWebBrakePoint(1000.0);
     runApp(MyApp());
