@@ -1,4 +1,4 @@
-## [0.0.1]
+## [0.0.1] - 02/13/2022
 
 * Initial release for adaptive screen flutter.
 
@@ -11,3 +11,7 @@
 
 * Refactor tab to tablet
 * Provide some documentation
+
+## [0.0.4] - 02/13/2022
+
+* Fix typo readme
