@@ -5,12 +5,12 @@ import 'package:flutter_test/flutter_test.dart';
 void main() {
   group('Adaptive screen test', () {
     test('init layout', () {
-      var mobile = ScreenInit.tabBreakPoint;
+      var mobile = ScreenInit.tabletBreakPoint;
       expect(mobile, 600.0);
 
-      ScreenInit.setTabBreakPoint(800.0);
+      ScreenInit.setTabletBreakPoint(800.0);
 
-      expect(ScreenInit.tabBreakPoint, 800.0);
+      expect(ScreenInit.tabletBreakPoint, 800.0);
     });
     testWidgets('Mobile layout widget test', (WidgetTester tester) async {
       await tester.pumpWidget(const MaterialApp(
@@ -29,7 +29,7 @@ void main() {
       await tester.pumpWidget(MaterialApp(
         home: AdaptiveScreen(
           key: const Key('AdaptiveWidget'),
-          tab: Container(
+          tablet: Container(
             key: const Key('WidgetTab'),
             height: 50,
             width: 50,

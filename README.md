@@ -1,4 +1,4 @@
-Hi Flutter dev, this package helps you to build UI with adaptive screen based on mobile, tab and web.
+Hi Flutter dev, this package helps you to build UI with adaptive screen based on mobile, tablet and web.
 
 ## Example
 
@@ -6,12 +6,12 @@ Hi Flutter dev, this package helps you to build UI with adaptive screen based on
 
 ## Getting started
 
-You can custom the brakepoint of the screen width or just use the default of 
+You can customize the brakepoint of the screen width or just use the default of 
 this package for the screen width.
 
 ## Usage
 
-The defaut brake point of tab is `600.0` and `950` for the web.
+The defaut brake point of tablet is `600.0` and `950` for the web.
 
 OR
 
@@ -20,9 +20,9 @@ you can set init brake point in main method like this
  
 ```dart
 void main(){
-    // here for setting mobile to tab brakepoint
+    // here for setting mobile to tablet brakepoint
     ScreenInit.setTabBrakePoint(650.0);
-    // here for setting tab to web brakepoint
+    // here for setting tablet to web brakepoint
     ScreenInit.setWebBrakePoint(1000.0);
     runApp(MyApp());
 }
@@ -33,9 +33,9 @@ AdaptiveScreen(
     mobile: Center(
         child: Text('Ini Mobile')
     ),
-    tab: Row(
+    tablet: Row(
         children:[
-            Text('Ini tab'),
+            Text('Ini tablet'),
             Container()
             // ...
         ]

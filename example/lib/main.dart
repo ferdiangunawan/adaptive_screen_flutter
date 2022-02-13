@@ -2,6 +2,7 @@ import 'package:adaptive_screen_flutter/adaptive_screen_flutter.dart';
 import 'package:flutter/material.dart';
 
 void main() {
+  // init customize breakpoint for web
   ScreenInit.setWebBreakPoint(1250);
   runApp(const MyApp());
 }
@@ -35,7 +36,7 @@ class HomePage extends StatelessWidget {
             child: Text('Ini Mobile'),
           ),
         ),
-        tab: Container(
+        tablet: Container(
           color: Colors.green,
           child: const Center(
             child: Text('Ini Tab'),

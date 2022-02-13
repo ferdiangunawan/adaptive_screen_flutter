@@ -6,3 +6,8 @@
 
 * Bugfix web widget
 * Add example to package
+
+## [0.0.3] - 02/13/2022
+
+* Refactor tab to tablet
+* Provide some documentation

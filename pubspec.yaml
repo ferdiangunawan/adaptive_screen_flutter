@@ -1,6 +1,6 @@
 name: adaptive_screen_flutter
-description: Make the layout become adaptive for mobile, tab and web screen.
-version: 0.0.2
+description: Make the layout become adaptive for mobile, tablet and web screen.
+version: 0.0.3
 homepage: https://github.com/ferdiangunawan/adaptive_screen_flutter
 
 environment:
