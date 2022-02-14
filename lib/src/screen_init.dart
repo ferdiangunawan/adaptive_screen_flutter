@@ -1,5 +1,3 @@
-part of 'adaptive_screen_flutter.dart';
-
 class ScreenInit {
   // This is the default tabletBreakPoint value
   static double tabletBreakPoint = 600;

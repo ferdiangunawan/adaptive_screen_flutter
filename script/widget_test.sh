@@ -1,0 +1,1 @@
+flutter test test/adaptive_screen_flutter_test.dart
