@@ -64,5 +64,23 @@ void main() {
       expect(textWeb, findsOneWidget);
       expect(adaptiveWidget, findsWidgets);
     });
+
+    testWidgets('If no property in Adaptive Screen',
+        (WidgetTester tester) async {
+      await tester.pumpWidget(MaterialApp(
+        home: AdaptiveScreen(
+          key: const Key('Adaptive'),
+        ),
+      ));
+      final adaptiveWidget = find.byWidgetPredicate(
+        (widget) =>
+            widget is AdaptiveScreen &&
+            widget.mobile == null &&
+            widget.tablet == null &&
+            widget.web == null,
+        // description: 'AdaptiveScreen widget must have at least one property',
+      );
+      expect(adaptiveWidget, findsOneWidget);
+    });
   });
 }
